@@ -9,7 +9,7 @@ THT=0;
 TTH=0;
 TTT=0;
 
-while [[ $HHH -ne 5 && $HHT -ne 5 && $HTH -ne 5 && $HTT -ne 5 ]]
+while [[ $HHH -ne 5 && $HHT -ne 5 && $HTH -ne 5 && $HTT -ne 5 && $THH -ne 5 && $THT -ne 5 && $TTH -ne 5 && $TTT -ne 5 ]]
 do
 	coin1=$((RANDOM%2));
 	a=$coin1;
@@ -33,22 +33,11 @@ do
 	then
 		echo "HTT";
 		((HTT++));
-	fi
-done
-
-while [[ $THH -ne 5 && $THT -ne 5 && $TTH -ne 5 && $TTT -ne 5 ]]
-do
-        coin1=$((RANDOM%2));
-        a=$coin1;
-        coin2=$((RANDOM%2));
-        b=$coin2;
-        coin3=$((RANDOM%2));
-        c=$coin3;
-        if [[ $a -eq 1 && $b -eq 0 && $c -eq 0 ]]
+        elif [[ $a -eq 1 && $b -eq 0 && $c -eq 0 ]]
         then
                 echo "THH";
                 ((THH++));
-        elif [[ $a -eq 1 && $b -eq 0 && $c -eq 0 ]]
+        elif [[ $a -eq 1 && $b -eq 0 && $c -eq 1 ]]
         then
                 echo "THT";
                 ((THT++));
